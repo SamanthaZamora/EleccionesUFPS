@@ -76,14 +76,14 @@ public class VotanteServlet extends HttpServlet {
 
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		List<Estamento> e = newEstamento.list();
-		request.setAttribute("estamento", e);
+		List<Estamento> estamentoList = newEstamento.list();
+		request.setAttribute("estamentoList", estamentoList);
 		
-		List<Tipodocumento> tipo= newTipo.list();
-		request.setAttribute("tipodocumento", tipo);
+		List<Tipodocumento> tipoList= newTipo.list();
+		request.setAttribute("tipoList", tipoList);
 		
-		List<Eleccion> elec = newEleccion.list();
-		request.setAttribute("eleccion", elec);
+		List<Eleccion> elecionList = newEleccion.list();
+		request.setAttribute("elecionList", elecionList);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("votante/indexV.jsp");
 		dispatcher.forward(request, response);

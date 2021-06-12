@@ -33,7 +33,7 @@
 				</div>
 				<br>
 				<div class="opcion">
-					<a href="#" style="text-decoration: none" ><p class="op_nombre">Registro de Votantes</p></a>
+					<a href="VotanteServlet?action=list" style="text-decoration: none" ><p class="op_nombre">Registro de Votantes</p></a>
 				</div>
 				<br>
 				<div class="opcion">
