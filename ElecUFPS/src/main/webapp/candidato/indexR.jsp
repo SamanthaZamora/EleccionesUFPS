@@ -34,7 +34,7 @@
 		<div class="card">
 			<div class="card-body">
 				<c:if test="${candidato != null}">
-					<form action="CandidatoServlet?action=update" method="post">
+					<form action="CandidatoServlet?action=update&id=${Candidato.id}" method="post">
 				</c:if>
 
 				<c:if test="${candidato==null}">

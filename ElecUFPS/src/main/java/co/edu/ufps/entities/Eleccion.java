@@ -1,6 +1,8 @@
 package co.edu.ufps.entities;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
+
 import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -26,11 +28,11 @@ public class Eleccion implements Serializable {
 	
 	private String nombre;
 
-	@Temporal(TemporalType.DATE)
-	private Date fechafin;
+	//@Temporal(TemporalType.DATE)
+	private Timestamp fechafin;
 
-	@Temporal(TemporalType.DATE)
-	private Date fechainicio;
+	//@Temporal(TemporalType.DATE)
+	private Timestamp fechainicio;
 
 	private String cargo;
 
@@ -44,16 +46,12 @@ public class Eleccion implements Serializable {
 	private List<Votante> votantes;
 
 	//contructor 2
-	public Eleccion(String nombre, Date fechafin, Date fechainicio, String cargo, List<Candidato> candidatos,
-			List<Estamento> estamentos, List<Votante> votantes) {
+	public Eleccion(String nombre, Timestamp  fechafin, Timestamp  fechainicio, String cargo) {
 		super();
 		this.nombre = nombre;
 		this.fechafin = fechafin;
 		this.fechainicio = fechainicio;
 		this.cargo = cargo;
-		this.candidatos = candidatos;
-		this.estamentos = estamentos;
-		this.votantes = votantes;
 	}
 	
 	//métodos opción

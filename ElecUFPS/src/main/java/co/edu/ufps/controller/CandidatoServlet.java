@@ -122,7 +122,6 @@ public class CandidatoServlet extends HttpServlet {
 		candidato.setId(id);
 		
 		newCandidato.update(candidato);
-		//response.sendRedirect("list");
 		this.list(request, response);
 	}
 	
@@ -134,7 +133,6 @@ public class CandidatoServlet extends HttpServlet {
 		
 		newCandidato.delete(candidato);		
 		this.list(request, response);
-		//response.sendRedirect("CandidatoServlet?action=list");
 	}
 	
 	private void list(HttpServletRequest request,HttpServletResponse response ) throws ServletException, SQLException, IOException{
