@@ -40,8 +40,8 @@ public class Votante implements Serializable {
 	private List<Voto> votos;
 
 	//contructor 2
-	public Votante(String nombre, String email, String documento, Eleccion eleccionBean,
-			Tipodocumento tipodocumentoBean) {
+	public Votante(String nombre, String email, String documento, 
+			Tipodocumento tipodocumentoBean, Eleccion eleccionBean) {
 		super();
 		this.nombre = nombre;
 		this.email = email;
