@@ -19,7 +19,7 @@ import co.edu.ufps.dao.VotanteDao;
 import co.edu.ufps.entities.Candidato;
 import co.edu.ufps.entities.Eleccion;
 
-@WebServlet("/CandidatoServlet")
+@WebServlet({"/CandidatoServlet"})
 public class CandidatoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -72,7 +72,7 @@ public class CandidatoServlet extends HttpServlet {
 		List<Eleccion> listaEleccion = newEleccion.list();
 		request.setAttribute("listaEleccion", listaEleccion);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("canR.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("candidato/indexR.jsp");
 		dispatcher.forward(request,response);
 	}
 
@@ -103,7 +103,7 @@ public class CandidatoServlet extends HttpServlet {
 		
 		request.setAttribute("candidato",candidato);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("candidato/canR.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("candidato/indexR.jsp");
 		dispatcher.forward(request,response);		
 	}
 
