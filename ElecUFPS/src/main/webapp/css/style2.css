@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
  :root {
-    --primarioOscuro: #c92a2a;
-    --primario: #c43b3b;
+    --primarioOscuro: #C40821;
+    --primario: #434343;
     --blanco: #FFF; 
     --negro: #000;
 
@@ -55,6 +55,7 @@
   .opcion  {
     background-color: var(--primario);
     padding: 5px;
+     border-radius: 10px 10px;
   }
 
   .op_nombre {
@@ -63,6 +64,20 @@
     font-family: var(--fuentePrincipal);
     text-align: center;
     line-height: 1.2;
-    color: black;
+    color: #000;
+  }
+  
+   /*footer*/
+  .footer {  
+    background-color: var(--primarioOscuro);
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+  }
+
+  .footer__texto {
+    font-family: var(--fuentePrincipal);
+    margin-top: 0.3rem;
+    text-align: center;
+    font-size: 2rem;
   }
   

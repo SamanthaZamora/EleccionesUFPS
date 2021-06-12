@@ -47,5 +47,8 @@
 		</div>
 	</div>
 	<br>
+	<footer class="footer">
+        <p class="footer__texto">Elecciones UFPS 2021 - 2025</p>
+    </footer>
 </body>
 </html>
