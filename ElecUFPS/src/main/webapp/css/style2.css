@@ -1,14 +1,18 @@
 @charset "ISO-8859-1";
 
-:root {
+ :root {
     --primarioOscuro: #c92a2a;
     --primario: #c43b3b;
     --blanco: #FFF; 
     --negro: #000;
 
-    --fuentePrincipal:  'Staatliches', cursive;
-}
+    --fuentePrincipal:  'small-caps';
+ }
 
+ a{
+      text-decoration: none;
+  }
+  
  .header {
     display: flex;
     justify-content: center;
@@ -26,7 +30,7 @@
     background-color: var(--primarioOscuro);
     display: flex;
     justify-content: center;
-    gap: 2rem;  /*separacion forma nueva */
+    gap: 2rem;  
   }
 
   .navegacion__enlace {
@@ -44,8 +48,21 @@
     color:var(--negro);
   }
   
-  .boton{
-  	
-  	background-color: #c92a2a;
+  .boton{  	
+  	background-color: var(--primarioOscuro);
+  }
+  
+  .opcion  {
+    background-color: var(--primario);
+    padding: 5px;
+  }
+
+  .op_nombre {
+    font-size:45px;
+    margin: 1rem 0;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    line-height: 1.2;
+    color: black;
   }
   
