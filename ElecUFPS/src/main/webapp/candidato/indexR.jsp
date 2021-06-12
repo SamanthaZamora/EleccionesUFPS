@@ -25,7 +25,7 @@
     <nav class="navegacion">
         <a class="navegacion__enlace navegacion__enlace--activo" href="index.jsp" style="text-decoration: none">Inicio</a>
         <a class="navegacion__enlace navegacion__enlace--activo" href="admin.jsp" style="text-decoration: none">Administrativo</a>
-        <a class="navegacion__enlace navegacion__enlace--activo" href="#" style="text-decoration: none">Ayuda</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="<%=request.getContextPath()%>/CandidatoServlet?action=list" style="text-decoration: none">Candidatos</a>
     </nav>
 
 	<br>
@@ -33,7 +33,7 @@
 	<div class="container col-md-5">
 		<div class="card">
 			<div class="card-body">
-				<c:if test="${Candidato != null}">
+				<c:if test="${candidato != null}">
 					<form action="CandidatoServlet?action=update" method="post">
 				</c:if>
 

@@ -16,7 +16,7 @@
 </head>
 <body>
 	<header class="header">
-        <a href="../index.jsp">
+        <a href="index.jsp">
             <img class="header__logo" src="img/logo.png" alt="LogoTipo">
         </a>
     </header>
@@ -63,7 +63,7 @@
 							<td><c:out value="${candidato.eleccionBean.nombre}" /></td>
 							<td><c:out value="${candidato.numero}" /></td>
 							<td>
-								<a href="<%=request.getContextPath()%>/CandidatoServlet?action=edit&id=<c:out value="${candidato.id}" />">Edit</a>
+								<a href="<%=request.getContextPath()%>/CandidatoServlet?action=edit&id=${candidato.id}">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; 
 								<a href="CandidatoServlet?action=delete&id=${candidato.id}">Delete</a>
 							</td>
