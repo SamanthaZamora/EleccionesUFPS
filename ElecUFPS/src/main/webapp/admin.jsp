@@ -29,7 +29,7 @@
 		<div class="row">			
 			<div class="col">
 				<div class="opcion">
-					<a href="#" style="text-decoration: none" ><p class="op_nombre">Registro de Candidatos</p></a>
+					<a href="candidato/listC.jsp" style="text-decoration: none" ><p class="op_nombre">Registro de Candidatos</p></a>
 				</div>
 				<br>
 				<div class="opcion">

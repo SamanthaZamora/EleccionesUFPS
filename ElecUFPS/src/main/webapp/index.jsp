@@ -31,7 +31,7 @@
 				<div class="card" style="width: 18rem;">
 					<img src="img/rector.png" height="236"" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Rector UFPS 2021- 2025</h5>
+						<h5 class="card-title"><strong>Rector UFPS 2021- 2025</strong></h5>
 						<p class="card-text ">
 							A través del Acuerdo No 15 de 2021 se convoca a la comunidad universitaria a la consulta
 							democrática para definir los candidatos para el periodo 2021-2025 de la Universidad.
@@ -48,7 +48,7 @@
 				<div class="card" style="width: 18rem;">
 					<img src="img/voto.png" height="236" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Consejo Académico</h5>
+						<h5 class="card-title"><strong>Consejo Académico</strong></h5>
 						<p class="card-text ">
 							 Acuerdo No 18 de 2021 se adopta el mecanismo del voto electrónico para la consulta
 							 democrática de los candidatos que conforman la lista del cargo de Rector para el periodo 2021-2025.
@@ -65,7 +65,7 @@
 				<div class="card" style="width: 18rem;">
 					<img src="img/estudiante.png" height="236" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Representante Estudiantil</h5>
+						<h5 class="card-title"><strong>Representante Estudiantil</strong></h5>
 						<p class="card-text ">
 							 Definición de los candidatos que se presentaran al Consejo Superior Universitario Francisco de Paula Santander para
 							 la designación de Rector para el periodo 2021-2025 de la Universidad.
