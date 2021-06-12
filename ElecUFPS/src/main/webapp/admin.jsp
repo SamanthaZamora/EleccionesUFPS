@@ -37,7 +37,7 @@
 				</div>
 				<br>
 				<div class="opcion">
-					<a href="#" style="text-decoration: none" ><p class="op_nombre">Registro de Elecciones</p></a> 
+					<a href="EleccionesServlet?action=list" style="text-decoration: none" ><p class="op_nombre">Registro de Elecciones</p></a> 
 				</div>
 				<br>
 				<div class="opcion">

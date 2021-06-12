@@ -146,8 +146,8 @@ public class EleccionesServlet extends HttpServlet {
 	
 	private void list(HttpServletRequest request,HttpServletResponse response ) 	throws ServletException, SQLException, IOException{
 		
-		List<Eleccion> listE = eleccionD.list();
-		request.setAttribute( "listadoElecciones",listE);
+		List<Eleccion> listElecciones = eleccionD.list();
+		request.setAttribute( "listElecciones",listElecciones);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("eleccion/listE.jsp");
 		dispatcher.forward(request,response);
