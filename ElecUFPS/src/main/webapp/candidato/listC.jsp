@@ -12,18 +12,18 @@
 <link rel="stylesheet" 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="../css/style2.css">
+<link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
 	<header class="header">
         <a href="../index.jsp">
-            <img class="header__logo" src="../img/logo.png" alt="LogoTipo">
+            <img class="header__logo" src="img/logo.png" alt="LogoTipo">
         </a>
     </header>
     
     <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="../index.jsp" style="text-decoration: none">Inicio</a>
-        <a class="navegacion__enlace navegacion__enlace--activo" href="../admin.jsp" style="text-decoration: none">Administrativo</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.jsp" style="text-decoration: none">Inicio</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="admin.jsp" style="text-decoration: none">Administrativo</a>
         <a class="navegacion__enlace navegacion__enlace--activo" href="<%=request.getContextPath()%>/CandidatoServlet?action=list" style="text-decoration: none">Candidatos</a>
     </nav>
     
@@ -63,7 +63,7 @@
 							<td><c:out value="${candidato.eleccionBean.nombre}" /></td>
 							<td><c:out value="${candidato.numero}" /></td>
 							<td>
-								<a href="<%=request.getContextPath()%>/CandidatoServlet?action=edit&id=<c:out value='${candidato.id}' />">Edit</a>
+								<a href="<%=request.getContextPath()%>/CandidatoServlet?action=edit&id=${candidato.id}">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; 
 								<a href="CandidatoServlet?action=delete&id=${candidato.id}">Delete</a>
 							</td>
