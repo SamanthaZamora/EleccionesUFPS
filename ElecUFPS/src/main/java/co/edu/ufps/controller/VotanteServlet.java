@@ -91,7 +91,7 @@ public class VotanteServlet extends HttpServlet {
 
 	private void insert(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
 		
-		int idE = Integer.parseInt(request.getParameter("estamento"));
+		int idE = Integer.parseInt(request.getParameter("eleccion"));
 		int idT = Integer.parseInt(request.getParameter("tipodocumento"));
 		
 		String documento = request.getParameter("documento");
@@ -130,16 +130,16 @@ public class VotanteServlet extends HttpServlet {
 
 	private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
 		
-		int idE = Integer.parseInt(request.getParameter("estamento"));
+		int idE = Integer.parseInt(request.getParameter("eleccion"));
+		Eleccion eleccion = (Eleccion) newEleccion.find(idE);
+		
 		int idT = Integer.parseInt(request.getParameter("tipodocumento"));
+		Tipodocumento tipodocumento = (Tipodocumento) newTipo.find(idT);
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		String nombre = request.getParameter("nombre");
 		String email = request.getParameter("email");
 		String documento = request.getParameter("documento");
-		
-		Tipodocumento tipodocumento = (Tipodocumento) newTipo.find(idT);
-		Eleccion eleccion = (Eleccion) newEleccion.find(idE);
 		
 		Votante votante = new Votante(nombre, email, documento, tipodocumento, eleccion);
 		votante.setId(id);

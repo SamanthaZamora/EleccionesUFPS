@@ -70,10 +70,21 @@
 					<label>Tipo de Documento</label> 
 					<br> 
 					<select	name="tipodocumento" class="rounded form-control">
-						<option value="">Seleccione un tipo de documento</option>					
-						<c:forEach var="tipodocumento" items="${tipoList}">
-							<option value="${tipodocumento.id}">${tipodocumento.descripcion}</option>
-						</c:forEach>
+						<option value="">Seleccione un tipo de documento</option>
+							<c:if test="${Votante != null}">
+								<c:forEach var="tipodocumento" items="${tipodocumento}">
+									<option value="${tipodocumento.id}">${tipodocumento.descripcion}</option>
+								</c:forEach>
+							</c:if>
+					
+						
+							<c:if test="${Votante == null}">
+								<c:forEach var="tipodocumento" items="${tipoList}">
+									<option value="${tipodocumento.id}">${tipodocumento.descripcion}</option>
+								</c:forEach>
+							</c:if>
+							
+
 					</select>
 				</fieldset>
 				
@@ -88,9 +99,19 @@
 					<br>
 					<select name="estamento" class="rounded form-control">
 						<option value="">Seleccione el estamento al que	pertenece</option>
-						<c:forEach var="estamento" items="${estamentoList}">
-							<option value="${estamento.id}">${estamento.descripcion }</option>
-						</c:forEach>
+						
+						<c:if test="${Votante != null}">
+								<c:forEach var="estamento" items="${estamento}">
+									<option value="${estamento.id}">${estamento.descripcion}</option>
+								</c:forEach>
+						</c:if>						
+						
+						<c:if test="${Votante == null}">
+							<c:forEach var="estamento" items="${estamentoList}">
+								<option value="${estamento.id}">${estamento.descripcion}</option>
+							</c:forEach>		
+						</c:if>
+							
 					</select>
 				</fieldset>						
 
@@ -99,9 +120,21 @@
 					<br> 
 					<select	name="eleccion" class="rounded form-control">
 						<option value="">Elecciones vigentes</option>
-						<c:forEach var="eleccion" items="${elecionList}">
-							<option value="${eleccion.id}">${eleccion.nombre}</option>
-						</c:forEach>
+						
+						<c:if test="${Votante != null}">
+							<c:forEach var="eleccion" items="${eleccion}">
+								<option value="${eleccion.id}">${eleccion.nombre}</option>
+							</c:forEach>
+						</c:if>
+						
+						<c:if test="${Votante == null}">
+							<c:forEach var="eleccion" items="${elecionList}">
+								<option value="${eleccion.id}">${eleccion.nombre}</option>
+							</c:forEach>
+						</c:if>
+						
+						
+						
 					</select>
 				</fieldset>
 
