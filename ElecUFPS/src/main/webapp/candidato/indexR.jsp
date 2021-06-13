@@ -34,56 +34,54 @@
 		<div class="card">
 			<div class="card-body">
 				<c:if test="${candidato != null}">
-					<form action="CandidatoServlet?action=update&id=${Candidato.id}" method="post">
+					<form action="CandidatoServlet?action=update" method="post">
 				</c:if>
 
-				<c:if test="${candidato==null}">
+				<c:if test="${candidato == null}">
 					<form action="CandidatoServlet?action=insert" method="post">
 				</c:if>
 
 				<caption>
 					<h2>
-						<c:if test="${Candidato != null}"> Editar Candidato </c:if>
+						<c:if test="${candidato != null}"> Editar Candidato </c:if>
 
-						<c:if test="${Candidato == null}"> Insertar Candidato  </c:if>
+						<c:if test="${candidato == null}"> Insertar Candidato  </c:if>
 					</h2>
 				</caption>
 
-				<c:if test="${Candidato != null}">
-					<input type="hidden" name="id" value="<c:out value='${Candidato.id}' />" />
+				<c:if test="${candidato != null}">
+					<input type="hidden" name="id" value="<c:out value='${candidato.id}' />" />
 				</c:if>
 
 				
 				<fieldset class="form-group">
 					<label>Documento</label> <input type="text"
-						value="<c:out value='${Candidato.documento}' />" class="form-control"
+						value="<c:out value='${candidato.documento}' />" class="form-control"
 						name="documento" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Nombre del Candidato</label> <input type="text"
-						value="<c:out value='${Candidato.nombre}' />" class="form-control"
+						value="<c:out value='${candidato.nombre}' />" class="form-control"
 						name="nombre" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Apellido del Candidato</label> <input type="text"
-						value="<c:out value='${Candidato.apellido}' />" class="form-control"
+						value="<c:out value='${candidato.apellido}' />" class="form-control"
 						name="apellido" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Número de Tarjeton</label> <input type="text"
-						value="<c:out value='${Candidato.numero}' />" class="form-control"
+						value="<c:out value='${candidato.numero}' />" class="form-control"
 						name="numero" required="required">
 				</fieldset>
 
 
 				<fieldset class="form-group">
-					<label>Elección</label> 
-					<br> 
-					<select	name="eleccion" class="rounded form-control">
-					
+					<label>Elección</label> <br> <select name="eleccion"
+						class="rounded form-control">
 						<option value="">Elecciones vigentes</option>
 						<c:forEach var="eleccion" items="${listaEleccion}">
 							<option value="${eleccion.id}">${eleccion.nombre}</option>

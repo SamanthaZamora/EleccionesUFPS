@@ -47,7 +47,7 @@ public class Votante implements Serializable {
 		this.email = email;
 		this.documento = documento;
 		this.eleccionBean = eleccionBean;
-		this.tipodocumentoBean = tipodocumentoBean;
+		this.tipodocumentoBean = tipodocumentoBean;		
 	}
 
 	//métodos 

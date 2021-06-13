@@ -48,7 +48,7 @@
 						<th>Nombre del Votante</th>
 						<th>Email </th>
 						<th>Tipo de Documento </th>
-						<th>Documento </th>
+						<th>Documento </th>					
 						<th>Elección </th>
 						<th>Actions</th>
 					</tr>

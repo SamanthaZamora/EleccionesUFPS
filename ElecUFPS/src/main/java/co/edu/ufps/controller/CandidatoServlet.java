@@ -83,12 +83,12 @@ public class CandidatoServlet extends HttpServlet {
 		String apellido = request.getParameter("apellido");
 		int numero = Integer.parseInt(request.getParameter("numero"));
 		
-		Eleccion eleccion = (Eleccion) newEleccion.find(Integer.parseInt(request.getParameter("eleccion")));
+		int idE = Integer.parseInt(request.getParameter("eleccion"));
+		Eleccion eleccion = (Eleccion) newEleccion.find(idE);
 
 		Candidato candidato = new Candidato (documento, nombre, apellido,  numero, eleccion);	
 		
 		newCandidato.insert(candidato);		
-		//response.sendRedirect("list");
 		this.list(request, response);
 	}
 	
@@ -116,9 +116,10 @@ public class CandidatoServlet extends HttpServlet {
 		String apellido = request.getParameter("apellido");
 		int numero = Integer.parseInt(request.getParameter("numero"));
 		
-		Eleccion eleccion = (Eleccion) newEleccion.find(Integer.parseInt(request.getParameter("eleccion")));
+		int idE = Integer.parseInt(request.getParameter("eleccion"));
+		Eleccion eleccion = (Eleccion) newEleccion.find(idE);
 
-		Candidato candidato = new Candidato (documento, nombre, apellido,  numero,eleccion);
+		Candidato candidato = new Candidato (documento, nombre, apellido,  numero, eleccion);
 		candidato.setId(id);
 		
 		newCandidato.update(candidato);

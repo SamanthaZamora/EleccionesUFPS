@@ -34,7 +34,7 @@
 		<div class="card">
 			<div class="card-body">
 				<c:if test="${Votante != null}">
-					<form action="VotanteServlet?action=update&id=${Votante.id}" method="post">
+					<form action="VotanteServlet?action=update" method="post">
 				</c:if>
 
 				<c:if test="${Votante == null}">
@@ -81,18 +81,18 @@
 					<label>Documento</label> <input type="text"
 						value="<c:out value='${Votante.documento}' />" class="form-control"
 						name="documento" required="required">
-				</fieldset>
-
+				</fieldset>	
+					
 				<fieldset class="form-group">
-					<label>Estamento</label> 
-					<br> 
-					<select	name="estamento" class="rounded form-control">
-					<option value="">Seleccione el estamento al que pertenece</option>
+					<label>Estamento</label>
+					<br>
+					<select name="estamento" class="rounded form-control">
+						<option value="">Seleccione el estamento al que	pertenece</option>
 						<c:forEach var="estamento" items="${estamentoList}">
 							<option value="${estamento.id}">${estamento.descripcion }</option>
 						</c:forEach>
 					</select>
-				</fieldset>
+				</fieldset>						
 
 				<fieldset class="form-group">
 					<label>Elección</label> 
