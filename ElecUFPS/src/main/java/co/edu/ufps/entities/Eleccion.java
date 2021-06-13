@@ -46,11 +46,11 @@ public class Eleccion implements Serializable {
 	private List<Votante> votantes;
 
 	//contructor 2
-	public Eleccion(String nombre, Timestamp  fechafin, Timestamp  fechainicio, String cargo) {
+	public Eleccion(String nombre, Timestamp  fechainicio, Timestamp  fechafin, String cargo) {
 		super();
 		this.nombre = nombre;
-		this.fechafin = fechafin;
 		this.fechainicio = fechainicio;
+		this.fechafin = fechafin;		
 		this.cargo = cargo;
 	}
 	

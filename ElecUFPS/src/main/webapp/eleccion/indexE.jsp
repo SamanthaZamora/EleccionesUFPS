@@ -33,48 +33,48 @@
 	<div class="container col-md-5">
 		<div class="card">
 			<div class="card-body">
-				<c:if test="${Eleccion != null}">
-					<form action="EleccionesServlet?action=update&id=${Eleccion.id}" method="post">
+				<c:if test="${eleccion != null}">
+					<form action="EleccionesServlet?action=update&id=${eleccion.id}" method="post">
 				</c:if>
 
-				<c:if test="${Eleccion == null}">
+				<c:if test="${eleccion == null}">
 					<form action="EleccionesServlet?action=insert" method="post">
 				</c:if>
 
 				<caption>
 					<h2>
-						<c:if test="${Eleccion != null}"> Editar Elección </c:if>
+						<c:if test="${eleccion != null}"> Editar Elección </c:if>
 
-						<c:if test="${Eleccion == null}"> Insertar Elección  </c:if>
+						<c:if test="${eleccion == null}"> Insertar Elección  </c:if>
 					</h2>
 				</caption>
 
-				<c:if test="${Eleccion != null}">
-					<input type="hidden" name="id" value="<c:out value='${Eleccion.id}' />" />
+				<c:if test="${eleccion != null}">
+					<input type="hidden" name="id" value="<c:out value='${eleccion.id}' />" />
 				</c:if>
 
 				
 				<fieldset class="form-group">
 					<label>Nombre de la Elección</label> <input type="text"
-						value="<c:out value='${Eleccion.nombre}' />" class="form-control"
+						value="<c:out value='${eleccion.nombre}' />" class="form-control"
 						name="nombre" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Fecha de Inicio</label> <input type="date"
-						value="<c:out value='${Eleccion.fechainicio}' />" class="form-control"
+						value="<c:out value='${eleccion.fechainicio}' />" class="form-control"
 						name="fechainicio" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Fecha Fin</label> <input type="date"
-						value="<c:out value='${Eleccion.fechafin}' />" class="form-control"
+						value="<c:out value='${eleccion.fechafin}' />" class="form-control"
 						name="fechafin" required="required">
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Cargo</label> <input type="text"
-						value="<c:out value='${Eleccion.cargo}' />" class="form-control"
+						value="<c:out value='${eleccion.cargo}' />" class="form-control"
 						name="cargo" required="required">
 				</fieldset>
 
